@@ -80,6 +80,7 @@
                           <ul class="dropdown-menu">
                               <li><a href="Administrativo.php?link=98">Usuários logados</a></li>
                               <li><a href="ListarPessoasFisica_1_1.php">Pessoa Fisica</a></li>
+                              <li><a href="ListarPessoasFisica_1_1_1.php">Pessoa Fisica II</a></li>
                               <li><a href="ListarPessoasJuridica_1_1.php">Pessoa Juridica</a></li>
                               <li><a href="#">Categorias Cadastradas</a></li>
                           </ul>
@@ -110,6 +111,7 @@
       <script src="js/ie-emulation-modes-warning.js"></script>
       <script src="jquery.js" type="text/javascript"></script>
       <script src="jquery.maskedinput.js" type="text/javascript"></script>
+      <script type="text/javascript" src="js/jquery.mask.min.js"/></script>     
 
   </body>
 </html>

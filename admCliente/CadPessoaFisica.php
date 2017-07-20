@@ -15,7 +15,7 @@ include_once './Seguranca.php';
     <head>
         <meta charset="UTF-8">
         <title></title>
-  
+
     <script type="text/javascript">
     function verificaNumero(e){
        if(e.which != 8 && e.which != 0 && (e.which< 48 || e.which > 57 )){
@@ -105,8 +105,8 @@ include_once './Seguranca.php';
                         <div class="form-group">
                             <label for="inputcep" class="col-sm-2 control-label">CEP</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" name="cep" placeholder="CEP"   
-                                       data-error="Por favor, Digite o CEP." required >
+                                <input type="text" id="cep" class="form-control" name="cep" placeholder="CEP"   
+                                       data-error="Por favor, Digite o CEP." maxlength="9" required >
                                 <div class="help-block with-errors"></div>
                             </div>
                             <label for="inputbairro" class="col-sm-1 control-label">Bairro</label>
@@ -147,7 +147,7 @@ include_once './Seguranca.php';
                         <div class="form-group">
                     <label for="inputtelefone" class="col-sm-2 control-label">Telefone</label>
                     <div class="col-sm-3">
-                        <input type="text" id="telefone" class="form-control"  name="telefone" placeholder="Telefone"   
+                        <input type="text" id="telefone" maxlength="12" class="form-control"  name="telefone" placeholder="Telefone"   
                                data-error="Por favor, Digite um telefone." required >
                         <div class="help-block with-errors"></div>
                     </div>
@@ -155,7 +155,7 @@ include_once './Seguranca.php';
                 <div class="form-group">
                     <label for="inputcelular" class="col-sm-2 control-label">Celular</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="celular" placeholder="Celular"   
+                        <input type="text" class="form-control" id="celular" maxlength="14" name="celular" placeholder="Celular"   
                                data-error="Por favor, Digite um Celular." required >
                         <div class="help-block with-errors"></div>
                     </div>
@@ -174,7 +174,9 @@ include_once './Seguranca.php';
             </div>
         </div>
     </div> <!-- /container -->
-
+  <script>jQuery("#cep").mask("99999-999");</script>
+  <script>jQuery("#telefone").mask("(99)99999999");</script>
+  <script>jQuery("#celular").mask("(99)9991999999");</script>
 </body>
 </html>
 
