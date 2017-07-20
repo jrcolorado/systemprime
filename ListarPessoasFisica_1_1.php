@@ -9,9 +9,8 @@
       include_once './TemplateMenu.php';
       include_once './Seguranca.php';
       include_once './ConexaoBanco.php';
-      include_once("conexao.php");
 ?>
-<?php
+<?php include_once("conexao.php");
 //Verificar se está sendo passado na URL a página atual, senao é atribuido a pagina 
 $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
 
@@ -34,7 +33,7 @@ $incio = ($quantidade_pg*$pagina)-$quantidade_pg;
 //Selecionar os cursos a serem apresentado na página
 $result_cursos = "SELECT * FROM clientes where tipo = '1' limit $incio, $quantidade_pg";
 $resultado_cursos = mysqli_query($conn, $result_cursos);
-$total_cursos = mysqli_num_rows($resultado_cursos);$result_cursos
+$total_cursos = mysqli_num_rows($resultado_cursos);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -42,13 +41,13 @@ $total_cursos = mysqli_num_rows($resultado_cursos);$result_cursos
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
-		
+		<title>Criar pagina com abas</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<div class="container theme-showcase" role="main">
 			<div class="page-header">
-				<h1>Clientes</h1>
+				<h1>Clientes Pessoas Fisicas</h1>
 			</div>
 			 <div class="col-md-12">
                 <table class="table table-striped" id="myTable">
@@ -64,10 +63,10 @@ $total_cursos = mysqli_num_rows($resultado_cursos);$result_cursos
                     <tbody>
                         <tr>
                             <?php
-                            $result_cursos = "SELECT * FROM clientes where tipo = '1' ORDER BY nome ASC limit $incio, $quantidade_pg";
+                        $result_cursos = "SELECT * FROM clientes where tipo = '1' limit $incio, $quantidade_pg";
                             $result = mysqli_query($conn, $result_cursos);
                             $total_cursos = mysqli_num_rows($resultado_cursos);
-                            
+                            ;
 
                             if ($result->num_rows > 0) {
                                 // output data of each row
@@ -85,7 +84,7 @@ $total_cursos = mysqli_num_rows($resultado_cursos);$result_cursos
                                 }
                             } else {?>
                                 <div class="alert alert-danger">
-                <strong>Informação!</strong>Nenhum Cliente encontrado.
+                <strong>Informação!</strong> Não tem mais clientes Cadastrados.
             </div>
                         <?php  
                             }
@@ -112,6 +111,11 @@ $total_cursos = mysqli_num_rows($resultado_cursos);$result_cursos
 							<span aria-hidden="true">&laquo;</span>
 					<?php }  ?>
 					</li>
+                                        <?php 
+					//Apresentar a paginacao
+					for($i = 1; $i < $num_pagina + 1; $i++){ ?>
+						<li><a href="ListarPessoasFisica_1_1.php?pagina=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+					<?php } ?>
 					
 					<li>
 						<?php
@@ -127,6 +131,4 @@ $total_cursos = mysqli_num_rows($resultado_cursos);$result_cursos
 			</nav>
 		</div>
 		
-		
-	</body>
 </html>

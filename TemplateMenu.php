@@ -84,14 +84,7 @@
                               <li><a href="#">Categorias Cadastradas</a></li>
                           </ul>
                       </li>
-                       <li class="dropdownUsuarios">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">testes<span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                             <li><a href="#">Jr Colorado</a></li>
-                             <li><a href="Administrativo.php?link=2">teste</a></li>
-                              <li><a href="ListarUsuarios_1.php">nada ainda</a></li>
-                          </ul>
-                      </li>
+                      
                       <li><a href="Administrativo.php?link=10">SAIR</a></li>
                   </ul>
                   <div class="navbar-right">
