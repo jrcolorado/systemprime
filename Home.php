@@ -11,8 +11,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href="css/style.css" rel="stylesheet">
-        <title></title>
+         <title></title>
     </head>
     <body>
         <div class="container theme-showcase" role="main">      
