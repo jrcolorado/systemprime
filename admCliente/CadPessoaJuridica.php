@@ -51,7 +51,7 @@ and open the template in the editor.
                         <div class="form-group">
                             <label for="inputcpf" class="col-sm-2 control-label">CNPJ</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="cnpj" placeholder="CNPJ"   
+                                <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ"   
                                        data-error="Por favor, Digite o CNPJ." required >
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -89,10 +89,10 @@ and open the template in the editor.
                         </div>
 
                         <div class="form-group">
-                            <label for="inputcep" class="col-sm-2 control-label">CEP</label>
+                              <label for="inputcep" class="col-sm-2 control-label">CEP</label>
                             <div class="col-sm-3">
-                                <input type="text" class="form-control" name="cep" placeholder="CEP"   
-                                       data-error="Por favor, Digite o CEP." required >
+                                <input type="text" id="cep" class="form-control" name="cep" placeholder="CEP"   
+                                       data-error="Por favor, Digite o CEP." maxlength="9" required >
                                 <div class="help-block with-errors"></div>
                             </div>
                             <label for="inputbairro" class="col-sm-1 control-label">Bairro</label>
@@ -133,7 +133,7 @@ and open the template in the editor.
                         <div class="form-group">
                     <label for="inputtelefone" class="col-sm-2 control-label">Telefone</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="telefone" placeholder="Telefone"   
+                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone"   
                                data-error="Por favor, Digite um telefone." required >
                         <div class="help-block with-errors"></div>
                     </div>
@@ -141,13 +141,10 @@ and open the template in the editor.
                 <div class="form-group">
                     <label for="inputcelular" class="col-sm-2 control-label">Celular</label>
                     <div class="col-sm-3">
-                        <input type="text" class="form-control" name="celular" placeholder="Celular">  
+                        <input type="text" class="form-control" id="celular" name="celular" placeholder="Celular">  
                     </div>
                 </div>
                 </div>
-
-                
-
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">

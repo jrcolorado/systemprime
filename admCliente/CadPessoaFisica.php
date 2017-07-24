@@ -15,26 +15,6 @@ include_once './Seguranca.php';
     <head>
         <meta charset="UTF-8">
         <title></title>
-
-    <script type="text/javascript">
-    function verificaNumero(e){
-       if(e.which != 8 && e.which != 0 && (e.which< 48 || e.which > 57 )){
-           return false;
-       } 
-    }
-    $(document).ready(function(){
-      $("#cpf").keypress(verificaNumero);   
-    });
-    
-    
-    function FormataCpf(evt){
-        vr = (navigator.appName == 'Netscape') ?evt.target.value : evt.srcElement.value;
-            if(vr.length == 3 ) vr = vr+".";
-            if(vr.length == 7 ) vr = vr+".";
-            if(vr.length == 11 ) vr = vr+"-";
-            return vr;
-    }
-    </script>
     </head>
     <body>
 
@@ -174,9 +154,6 @@ include_once './Seguranca.php';
             </div>
         </div>
     </div> <!-- /container -->
-  <script>jQuery("#cep").mask("99999-999");</script>
-  <script>jQuery("#telefone").mask("(99)99999999");</script>
-  <script>jQuery("#celular").mask("(99)9991999999");</script>
 </body>
 </html>
 

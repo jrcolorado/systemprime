@@ -60,7 +60,7 @@ and open the template in the editor.
                         <div class="form-group">
                             <label for="inputcpf" class="col-sm-2 control-label">CPF</label>
                             <div class="col-sm-10">
-                                <input type="text" value=" <?php echo $cpf; ?>" class="form-control" name="cpf" placeholder="CFP"   
+                                <input type="text" value=" <?php echo $cpf; ?>" maxlength="14" class="form-control" name="cpf" onkeypress="this.value = FormataCpf(event)" placeholder="CFP"   
                                        data-error="Por favor, Digite o CPF." required >
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -120,7 +120,7 @@ and open the template in the editor.
               <div class="form-group">
                   <label for="inputtelefone" class="col-sm-2 control-label">Telefone</label>
                   <div class="col-sm-3">
-                      <input type="text" value=" <?php echo $telefone; ?>" class="form-control" name="telefone" placeholder="Telefone"   
+                      <input type="text" value=" <?php echo $telefone; ?>" maxlength="12" class="form-control" id="telefone" name="telefone" placeholder="Telefone"   
                              data-error="Por favor, Digite um telefone." required >
                       <div class="help-block with-errors"></div>
                   </div>
@@ -128,7 +128,7 @@ and open the template in the editor.
               <div class="form-group">
                   <label for="inputcelular" class="col-sm-2 control-label">Celular</label>
                   <div class="col-sm-3">
-                      <input type="text" value=" <?php echo $celular; ?>" class="form-control" name="celular" placeholder="Celular"   
+                      <input type="text" value=" <?php echo $celular; ?>" maxlength="14" class="form-control" id="celular" name="celular" placeholder="Celular"   
                              data-error="Por favor, Digite um Celular." required >
                       <div class="help-block with-errors"></div>
                   </div>
@@ -145,5 +145,6 @@ and open the template in the editor.
                   </div>
                 
                 </form>
+        
     </body>
 </html>

@@ -111,7 +111,9 @@
       <script src="js/ie-emulation-modes-warning.js"></script>
       <script src="jquery.js" type="text/javascript"></script>
       <script src="jquery.maskedinput.js" type="text/javascript"></script>
-      <script type="text/javascript" src="js/jquery.mask.min.js"/></script>     
+      <script src="js/jquery.mask.min.js" type="text/javascript"/></script>
+      <script src="js/jquery-1.12.3.min.js" type="text/javascript"></script>
+      <script src="js/mascaras.js" type="text/javascript"></script>
 
   </body>
 </html>
