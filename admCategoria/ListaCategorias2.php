@@ -122,9 +122,6 @@ $total_cursos = mysqli_num_rows($resultado_cursos);
 		</div>
       </div>
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-                <script src="js/jquery.min.js"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-                <script src="js/vendor/bootstrap.min.js"></script>
+	
 </body>
 </html>
